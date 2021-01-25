@@ -1,0 +1,29 @@
+// Import global Roboto font with weights
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+// DESKTOP
+
+// Bit hacky, but apply global font and line-height for p tags
+p, h1, h2, button {
+    font-family: "Roboto";
+}
+
+p {
+    line-height: 24px;
+}
+
+// Welcome/info area
+.hero {
+    display: flex;
+    min-height: 650px;
+    margin-top: $nav-height;
+}
+
+// MOBILE
+
+// Change hero from horizontal to vertical on mobile
+@media (max-width: $breakpoint) {
+    .hero {
+        flex-direction: column;
+    }
+}

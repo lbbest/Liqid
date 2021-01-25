@@ -1,0 +1,108 @@
+// DESKTOP
+
+// Desktop nav
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: $nav-height;
+    padding: 20px 30px;
+    background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__left {
+        display: flex;
+        &__user {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__hello {
+                padding: 0 20px;
+                margin-right: 20px;
+                border-right: 1px solid $white;
+                color: white;
+                span {
+                    text-decoration: underline;
+                }
+            }
+            &__logout {
+                padding: 0 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+    &__right {
+        display: flex;
+        a {
+            margin-left: 25px;
+        }
+    }
+}
+
+// Liqid 'Q' logo
+.logo {
+    background-color: $red;
+    height: 53px;
+    width: 53px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__svg {
+        path {
+            fill: $white;
+            stroke-width: 0px;
+        }
+    }
+}
+
+// Nav links
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    &__icon {
+        margin-right: 10px;
+        path {
+            fill: $white;
+            stroke-width: 0px;
+        }
+    }
+}
+
+.nav-item:hover {
+    color: $red;
+}
+
+.nav-item:hover > * {
+    path {
+        fill: $red;
+    }
+}
+
+// Current open page
+.active-page {
+    color: $red !important;
+    path {
+        fill: $red;
+    }
+}
+
+// MOBILE
+
+// Hide desktop nav at mobile breakpoint
+@media (max-width: $breakpoint) {
+    .nav {
+        display: none !important;
+    }
+}

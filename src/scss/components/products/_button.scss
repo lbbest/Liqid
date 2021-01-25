@@ -1,0 +1,30 @@
+// DESKTOP
+
+.product-button {
+    width: auto;
+    min-width: 176px;
+    min-height: 50px;
+    border: none;
+    background-color: $red;
+    color: $white;
+    font-weight: 300;
+    &__icon {
+        margin-left: 10px;
+        path {
+            fill: $white;
+            stroke-width: 0px;
+        }
+    }
+}
+
+.product-button:hover {
+    cursor: pointer;
+    background-color: $navy;
+}
+
+// MOBILE
+
+@media (max-width: $breakpoint) {
+
+    
+}

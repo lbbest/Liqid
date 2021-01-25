@@ -1,0 +1,117 @@
+// DESKTOP
+
+// Hide mobilenav on desktop
+@media (min-width: $breakpoint) {
+    .mobilenav {
+        display: none !important;
+    }
+}
+
+// MOBILE
+
+// Standard mobile nav
+.mobilenav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $black;
+    max-height: $nav-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    &__hello {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__user {
+            padding: 0 20px;
+            color: white;
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Red nav overrides when dropdown is opened
+.mobilenav-red {
+    background-color: $red;
+        &__logo {
+            background-color: $black;
+            &__svg {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+        &__user {
+            padding: 0 20px;
+            color: white;
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+
+// Dropdown menu
+.dropdown-menu {
+    position: fixed !important;
+    display: none;
+    background-color: $red;
+    margin: 0;
+    padding: 15px 0;
+    min-height: calc(100vh - 90px);
+    width: 100vw;
+    &__item {
+        margin: 30px auto;
+    }
+    &__liqid {
+        margin-top: auto;
+        margin-bottom: 83px;
+        width: 100%;
+        pointer-events: none;
+        path {
+            fill: $white;
+            stroke-width: 0px;
+        }
+    }
+}
+
+
+// Dropdown links
+.dropdown-item {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.dropdown-item:hover, .dropdown-item:hover > * {
+    color: $white;
+        path {
+            fill: $white;
+        }
+}
+
+// Show dropdown when active/open
+.active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+// Hamburger/close buttons
+.mobile-menu {
+    &__hamburger {
+        path {
+            fill: $red;
+            stroke-width: 0px;
+        }
+    }
+    &__close {
+        path {
+            fill: $white;
+            stroke-width: 0px;
+        }
+    }
+}

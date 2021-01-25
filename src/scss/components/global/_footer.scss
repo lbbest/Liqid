@@ -1,0 +1,14 @@
+.footer {
+    width: 100%;
+    height: 165px;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__liqid {
+        path {
+            fill: $red;
+            stroke-width: 0px;
+        }
+    }
+}
